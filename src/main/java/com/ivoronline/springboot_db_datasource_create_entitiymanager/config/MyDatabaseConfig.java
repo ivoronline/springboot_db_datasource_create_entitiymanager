@@ -12,7 +12,7 @@ import javax.sql.DataSource;
 @Configuration
 @EnableJpaRepositories(
   basePackages            = "com.ivoronline.springboot_db_datasource_create_entitiymanager.repository",
-  entityManagerFactoryRef = "entityManagerFactoryBean"
+  entityManagerFactoryRef = "myEntityManagerFactoryBean"
 )
 public class MyDatabaseConfig {
 
@@ -37,7 +37,7 @@ public class MyDatabaseConfig {
   // ENTITY MANAGER FACTORY BEAN
   //=========================================================================================================
   @Bean
-  LocalContainerEntityManagerFactoryBean entityManagerFactoryBean (
+  LocalContainerEntityManagerFactoryBean myEntityManagerFactoryBean (
     EntityManagerFactoryBuilder entityManagerFactoryBuilder,
     DataSource                  dataSource
   ) {
@@ -46,5 +46,5 @@ public class MyDatabaseConfig {
           .packages("com.ivoronline.springboot_db_datasource_create_entitiymanager.entity")
           .build();
   }
-
+  
 }
