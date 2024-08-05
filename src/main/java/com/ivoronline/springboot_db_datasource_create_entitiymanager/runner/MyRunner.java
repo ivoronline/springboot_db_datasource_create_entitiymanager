@@ -10,8 +10,7 @@ import org.springframework.stereotype.Component;
 public class MyRunner implements CommandLineRunner {
 
   //PROPERTIES
-  @Autowired
-  PersonRepository repository;
+  @Autowired PersonRepository repository;
 
   //=========================================================================================================
   // INSERT RECORDS
